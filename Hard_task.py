@@ -4,8 +4,8 @@ list_numbers = []
 for i in range(1, n):
     list_numbers.append(i)
 for j in range(len(list_numbers)):
-    for k in range(1, len(list_numbers)):
-        if n % (list_numbers[j]+list_numbers[k]) == 0 and list_numbers[j] != list_numbers[k] and list_numbers[j] < list_numbers[k]:
+    for k in range((j+1), len(list_numbers)):
+        if n % (list_numbers[j]+list_numbers[k]) == 0:
             result += str(list_numbers[j])
             result += str(list_numbers[k])
 print(result)
